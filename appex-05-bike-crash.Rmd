@@ -1,0 +1,76 @@
+---
+title: "AE 05"
+subtitle: "NC Bike Crashes"
+date: "Due: September 2, 11:59PM"
+author: "YOUR NAME GOES HERE"
+output: 
+  html_document
+---
+
+## Clone a repo + start a new project
+
+- Click on the link provided in the slides to create your own private repo for 
+this exercise.
+
+- If you need further instructions, refer back to Lab 01 linked
+[here](https://www2.stat.duke.edu/courses/Fall20/sta199.001/labs/lab-01-post.html)
+
+- Configure git by typing the following in the Console (using your GitHub
+username and e-mail as appropriate)
+
+```{r eval=FALSE}
+library(usethis)
+use_git_config(user.name="your name", user.email="your email")
+```
+
+## Practice with data wrangling
+
+```{r load-packages, warning = FALSE, message = FALSE}
+library(tidyverse)
+```
+
+The data set contains all North Carolina bike crash data from 2007-2014. The 
+dataset was originally downloaded on September 6, 2018 and is available in the 
+dsbox R package. 
+
+Use the code below to load the data from the .csv file
+
+```{r load-data, warning = FALSE, message = FALSE}
+ncbikecrash <- read_csv("data/ncbikecrash.csv")
+```
+
+### Part 1
+
+Display the first 10 rows of the ncbikecrash data set.
+
+```{r}
+
+```
+
+
+### Part 2 
+
+Filter for bike crashes in Durham County where the driver age group is 0 to 19.
+
+```{r}
+
+```
+
+### Part 3
+
+On which day of the week did the most bike crashes occur? Use the `count` 
+function to get the number of bike crashes for each day (`crash_day`). Display 
+the results in descending order.
+
+```{r}
+
+```
+
+### Part 4
+
+Calculate the average estimated driver speed (`driver_est_speed`) based on 
+whether the crash was a hit and run (`hit_run`).
+
+```{r}
+
+```
